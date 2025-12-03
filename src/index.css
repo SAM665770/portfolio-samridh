@@ -90,7 +90,7 @@ body {
     }
 
     .dock-icon {
-      @apply size-14 3xl:size-20 cursor-pointer hover:scale-130 hover:-translate-y-5 transition-all duration-200 ease-linear;
+      @apply size-14 3xl:size-20 cursor-pointer hover:scale-130 hover:-translate-y-5 transition-all duration-100 ease-linear;
 
       img {
         @apply object-cover object-center;
@@ -115,7 +115,7 @@ body {
   }
 
   #window-header {
-    @apply flex items-center justify-between px-4 py-3 rounded-t-lg bg-gray-50 border-b border-gray-200 select-none text-sm text-gray-400;
+    @apply flex items-center justify-between px-4 py-3 rounded-t-lg bg-gray-50 border-b border-gray-200 select-none text-sm text-gray-400 cursor-grab active:cursor-grabbing;
   }
 
   #safari {

@@ -3,14 +3,14 @@ import { Tooltip } from "react-tooltip";
 import { useWindowStore } from "../store/window";
 
 const Dock = () => {
-  const { openWindow, closeWindow, focusWindow, windows } = useWindowStore();
+  const { openWindow, closeWindow, windows } = useWindowStore();
 
   const toggleApp = (app) => {
     if (!app.canOpen) return;
 
     const window = windows[app.id];
 
-    if (window.canOpen) {
+    if (window.isOpen) {
       closeWindow(app.id);
     } else {
       openWindow(app.id);
