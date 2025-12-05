@@ -1,4 +1,4 @@
-import { Dock, Navbar, Welcome } from "./components/index.js";
+import { Dock, Home, Navbar, Welcome } from "./components/index.js";
 import {
   Contact,
   Finder,
@@ -25,6 +25,7 @@ const App = () => {
       <Text />
       <Image />
       <Contact />
+      <Home/>
     </main>
   );
 };
