@@ -8,7 +8,7 @@ import { useWindowStore } from "../store/window.js";
 
 const Finder = () => {
   const { setActiveLocation, activeLocation } = useLocationStore();
-  const { openWindow } = useWindowStore();
+  const { openWindow, focusWindow } = useWindowStore();
 
   const openItem = (item) => {
     if (item.fileType === "pdf") return openWindow("resume");
@@ -17,7 +17,9 @@ const Finder = () => {
       return window.open(item.href, "_blank");
 
     // for opening images and text file
-    openWindow(`${item.fileType}${item.kind}`, item);
+    const windowKey = `${item.fileType}${item.kind}`;
+    openWindow(windowKey, item);
+    focusWindow(windowKey);
   };
 
   const renderList = (items) =>

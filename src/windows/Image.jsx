@@ -1,4 +1,3 @@
-import { Edit } from "lucide-react";
 import { WindowControls } from "../components";
 import WindowWrapper from "../hoc/WindowWrapper";
 import { useWindowStore } from "../store/window";
@@ -18,13 +17,13 @@ const Image = () => {
         <h2>{name}</h2>
       </div>
 
-      <div className="p-5 bg-white">
+      <div className="p-5 bg-white h-[80vh] w-[70vw] overflow-hidden">
         {imageUrl ? (
-          <div className="w-full">
+          <div className="w-full h-full flex items-center justify-center">
             <img
               src={imageUrl}
               alt={name}
-              className="w-full h-auto max-h-[70vh] object-contain rounded"
+              className="max-w-full max-h-full object-contain rounded"
             />
           </div>
         ) : null}
